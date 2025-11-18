@@ -65,9 +65,9 @@
                             <span class="author-block">
                                Ding Wang</a><sup>2</sup>,</span>
                             <span class="author-block">
-                                <a href="https://www.eitech.edu.cn/?tid=62&p=teacher&lang=en" target="_blank">Yuntian Chen</a><sup>2</sup>,</span>
-                            <span class="author-block">
                                 <a href="https://vision.sjtu.edu.cn/" target="_blank">Chao Ma</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://www.eitech.edu.cn/?tid=62&p=teacher&lang=en" target="_blank">Yuntian Chen</a><sup>2</sup>,</span>
                             <span class="author-block">
                                 <a href="https://english.seiee.sjtu.edu.cn/english/detail/842_802.htm"
                                     target="_blank">Xiaokang Yang</a><sup>1</sup>,
@@ -179,14 +179,11 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                         Video diffusion models have exhibited tremendous progress in various video generation tasks. 
-                         However, existing models struggle to capture latent physical knowledge, failing to infer physical phenomena that are challenging to articulate with natural language. 
-                         Generating videos following the fundamental physical laws is still an opening challenge. To address this challenge, we propose a novel method to teach video diffusion models with latent physical phenomenon knowledge,
-                         enabling the accurate generation of physically informed phenomena. Specifically, we first pre-train Masked Autoencoders (MAE) to reconstruct the physical phenomena, 
-                         resulting in output embeddings that encapsulate latent physical phenomenon knowledge. Leveraging these embeddings, we could generate the pseudo-language prompt features based on the aligned spatial relationships between CLIP vision and language encoders. 
-                         Particularly, given that diffusion models typically use CLIP's language encoder for text prompt embeddings, our approach integrates the CLIP visual features informed by latent physical knowledge into a quaternion hidden space. 
-                         This enables the modeling of spatial relationships to produce physical knowledge-informed pseudo-language prompts. By incorporating these prompt features and fine-tuning the video diffusion model in a parameter-efficient manner, 
-                         the physical knowledge-informed videos are successfully generated. We validate our method extensively through both numerical simulations and real-world observations of physical phenomena, demonstrating its remarkable performance across diverse scenarios.
+                        Video diffusion models have achieved impressive results in natural scene generation, yet they struggle to generalize to scientific phenomena such as fluid simulations and meteorological processes,
+                        where underlying dynamics are governed by scientific laws. These tasks pose unique challenges, including severe domain gaps, limited training data, and the lack of descriptive language annotations. To handle this dilemma, 
+                        we extracted the latent scientific phenomena knowledge and further proposed a fresh framework that teaches video diffusion models to generate scientific phenomena from a single initial frame. 
+                        Particularly, static knowledge is extracted via pre-trained masked autoencoders, while dynamic knowledge is derived from pre-trained optical flow prediction. 
+                        Subsequently, based on the aligned spatial relations between the CLIP vision and language encoders, the visual embeddings of scientific phenomena, guided by latent scientific phenomena knowledge, are projected to generate the pseudo-language prompt embeddings in both spatial and frequency domains.  By incorporating these prompts and fine-tuning the video diffusion model, we enable the generation of videos that better adhere to scientific laws. Extensive experiments on both computational fluid dynamics simulations and real-world typhoon observations demonstrate the effectiveness of our approach, achieving superior fidelity and consistency across diverse scientific scenarios.
                         </p>
                     </div>
                 </div>
@@ -1248,10 +1245,10 @@
             <h2 class="title">BibTeX</h2>
             <pre><code>
     @article{cao2024teaching,
-    title={Teaching Video Diffusion Model with Latent Physical Phenomenon Knowledge},
-    author={Cao, Qinglong and Wang, Ding and Li, Xirui and Chen, Yuntian and Ma, Chao and Yang, Xiaokang},
+    title={Latent Knowledge-Guided Video Diffusion for Scientific Phenomena Generation from a Single Initial Frame},
+    author={Cao, Qinglong and Li, Xirui and Wang, Ding and Ma, Chao and Chen, Yuntian and Yang, Xiaokang},
     journal={arXiv preprint arXiv:2411.11343},
-    year={2024}
+    year={2025}
     }
 </code></pre>
         </div>
